@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Správa dverí a prístupových bodov Fakulty riadenia a informatiky.">
+    <title>Dvere a prístupové body | Prístupový systém FRI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="topbar">
+        <a class="brand" href="index.html" aria-label="Prístupový systém FRI – správa dverí">
+            <img src="images/FRI_H_S_sk_cb.png" alt="Žilinská univerzita v Žiline, Fakulta riadenia a informatiky">
+        </a>
+        <p class="system-title">Prístupový systém FRI</p>
+        <div class="account">
+            <span>Prihlásený: Ján Mrkvička / Administrátor</span>
+            <a class="logout" href="index.html">Odhlásiť sa</a>
+        </div>
+    </header>
+
+    <div class="app-layout">
+        <nav class="sidebar" aria-label="Hlavná navigácia">
+            <a href="placeholder.html">Prehľad</a>
+            <a href="index.html" aria-current="page">Dvere / Prístupové body</a>
+            <a href="placeholder.html">Osoby</a>
+            <a href="placeholder.html">Logy</a>
+            <a href="placeholder.html">Žiadosti o prístup</a>
+        </nav>
+
+        <main class="main-content">
+            <h1>Správa dverí a prístupových bodov</h1>
+
+            <section class="table-card" aria-label="Zoznam dverí">
+                <div class="table-toolbar">
+                    <label class="search-field">
+                        <span class="visually-hidden">Hľadať dvere podľa názvu alebo miesta</span>
+                        <span class="search-icon" aria-hidden="true"></span>
+                        <input type="search" placeholder="Hľadať dvere podľa názvu/miesta...">
+                    </label>
+                    <button class="button button-primary" type="button">+ Pridať</button>
+                </div>
+
+                <div class="table-scroll">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">Názov dverí</th>
+                                <th scope="col">Popis</th>
+                                <th scope="col">Akcie</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-label="ID">1</td>
+                                <th scope="row" data-label="Názov dverí">RB052</th>
+                                <td data-label="Popis">Počítačová učebňa</td>
+                                <td data-label="Akcie"><a class="edit-link" href="placeholder.html">Upraviť</a></td>
+                            </tr>
+                            <tr>
+                                <td data-label="ID">2</td>
+                                <th scope="row" data-label="Názov dverí">RB053</th>
+                                <td data-label="Popis">Počítačová učebňa</td>
+                                <td data-label="Akcie"><a class="edit-link" href="placeholder.html">Upraviť</a></td>
+                            </tr>
+                            <tr>
+                                <td data-label="ID">3</td>
+                                <th scope="row" data-label="Názov dverí">RA012</th>
+                                <td data-label="Popis">Počítačová učebňa</td>
+                                <td data-label="Akcie"><a class="edit-link" href="placeholder.html">Upraviť</a></td>
+                            </tr>
+                            <tr>
+                                <td data-label="ID">4</td>
+                                <th scope="row" data-label="Názov dverí">RA013</th>
+                                <td data-label="Popis">Počítačová učebňa</td>
+                                <td data-label="Akcie"><a class="edit-link" href="placeholder.html">Upraviť</a></td>
+                            </tr>
+                            <tr>
+                                <td data-label="ID">5</td>
+                                <th scope="row" data-label="Názov dverí">RC009</th>
+                                <td data-label="Popis">Prednášková miestnosť</td>
+                                <td data-label="Akcie"><a class="edit-link" href="placeholder.html">Upraviť</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="table-footer">
+                    <span>Zobrazených 1–5 z ... záznamov</span>
+                    <nav class="pagination" aria-label="Stránkovanie">
+                        <a href="index.html" aria-label="Predchádzajúca strana">Predchádzajúca</a>
+                        <a class="page-number is-current" href="index.html" aria-current="page">1</a>
+                        <a class="page-number" href="index.html">2</a>
+                        <a class="page-number" href="index.html">3</a>
+                        <a href="index.html" aria-label="Nasledujúca strana">Nasledujúca</a>
+                    </nav>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
