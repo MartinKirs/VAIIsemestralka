@@ -1,5 +1,7 @@
 <?php
+
 /** @var \Framework\Support\LinkGenerator $link */
+
 ?>
 <h1>Prehľad prístupového systému</h1>
 
