@@ -27,7 +27,7 @@
                 <th scope="row" data-label="Modul">Dvere a prístupové body</th>
                 <td data-label="Stav">5 evidovaných miestností</td>
                 <td data-label="Akcie">
-                    <a class="edit-link" href="<?= $link->url('home.doors') ?>">Prejsť na správu dverí</a>
+                    <a class="edit-link" href="<?= $link->url('door.index') ?>">Otvoriť správu dverí</a>
                 </td>
             </tr>
             <tr>

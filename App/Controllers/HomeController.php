@@ -52,6 +52,6 @@ class HomeController extends BaseController
      */
     public function doors(Request $request): Response
     {
-        return $this->html();
+        return $this->redirect($this->url('door.index'));
     }
 }
