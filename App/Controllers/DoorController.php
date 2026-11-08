@@ -6,6 +6,7 @@ use App\Models\Door;
 use Framework\Core\BaseController;
 use Framework\Http\Request;
 use Framework\Http\Responses\Response;
+
 class DoorController extends BaseController
 {
     public function authorize(Request $request, string $action): bool
@@ -13,9 +14,6 @@ class DoorController extends BaseController
         return true;
     }
 
-    /**
-     * Zobrazenie zoznamu dverí (Read)
-     */
     public function index(Request $request): Response
     {
         $doors = Door::getAll();
@@ -24,9 +22,6 @@ class DoorController extends BaseController
         ]);
     }
 
-    /**
-     * Zobrazenie formulára na pridanie dverí (Create - GET)
-     */
     public function add(Request $request): Response
     {
         return $this->html([
@@ -35,9 +30,6 @@ class DoorController extends BaseController
         ], 'form');
     }
 
-    /**
-     * Zobrazenie formulára na úpravu dverí (Update - GET)
-     */
     public function edit(Request $request): Response
     {
         $id = (int)$request->value('id');
@@ -53,9 +45,6 @@ class DoorController extends BaseController
         ], 'form');
     }
 
-    /**
-     * Spracovanie odoslaného formulára pre pridanie aj úpravu (Create / Update - POST)
-     */
     public function save(Request $request): Response
     {
         $id = (int)$request->value('id');
@@ -100,9 +89,6 @@ class DoorController extends BaseController
         return $this->redirect($this->url('door.index'));
     }
 
-    /**
-     * Odstránenie záznamu z databázy (Delete - POST)
-     */
     public function delete(Request $request): Response
     {
         $id = (int)$request->value('id');

@@ -9,57 +9,57 @@ $isEdit = $door->getId() !== null;
 <h1><?= $isEdit ? 'Upraviť dvere' : 'Pridať nové dvere' ?></h1>
 
 <section class="table-card form-card" aria-label="Formulár dverí">
-    <?php if (!empty($errors)): ?>
+    <?php if (!empty($errors)) { ?>
         <div class="form-errors" role="alert">
             <ul>
-                <?php foreach ($errors as $error): ?>
+                <?php foreach ($errors as $error) { ?>
                     <li><?= htmlspecialchars($error) ?></li>
-                <?php endforeach; ?>
+                <?php } ?>
             </ul>
         </div>
-    <?php endif; ?>
+    <?php } ?>
 
     <form method="post" action="<?= $link->url('door.save') ?>">
-        <?php if ($isEdit): ?>
+        <?php if ($isEdit) { ?>
             <input type="hidden" name="id" value="<?= (int)$door->getId() ?>">
-        <?php endif; ?>
+        <?php } ?>
 
         <div class="form-group">
             <label for="door-name">Názov dverí (miestnosť)</label>
             <input
-                type="text"
-                id="door-name"
-                name="name"
-                required
-                maxlength="50"
-                placeholder="napr. RB052"
-                value="<?= htmlspecialchars((string)$door->getName()) ?>"
+                    type="text"
+                    id="door-name"
+                    name="name"
+                    required
+                    maxlength="50"
+                    placeholder="napr. RB052"
+                    value="<?= htmlspecialchars((string)$door->getName()) ?>"
             >
         </div>
 
         <div class="form-group">
             <label for="door-building">Budova / Pavilón</label>
             <input
-                type="text"
-                id="door-building"
-                name="building"
-                required
-                maxlength="50"
-                placeholder="napr. RB"
-                value="<?= htmlspecialchars((string)$door->getBuilding()) ?>"
+                    type="text"
+                    id="door-building"
+                    name="building"
+                    required
+                    maxlength="50"
+                    placeholder="napr. RB"
+                    value="<?= htmlspecialchars((string)$door->getBuilding()) ?>"
             >
         </div>
 
         <div class="form-group">
             <label for="door-description">Popis miestnosti</label>
             <input
-                type="text"
-                id="door-description"
-                name="description"
-                required
-                maxlength="255"
-                placeholder="napr. Počítačová učebňa"
-                value="<?= htmlspecialchars((string)$door->getDescription()) ?>"
+                    type="text"
+                    id="door-description"
+                    name="description"
+                    required
+                    maxlength="255"
+                    placeholder="napr. Počítačová učebňa"
+                    value="<?= htmlspecialchars((string)$door->getDescription()) ?>"
             >
         </div>
 

@@ -28,27 +28,30 @@
             </tr>
             </thead>
             <tbody>
-            <?php if (empty($doors)): ?>
+            <?php if (empty($doors)) { ?>
                 <tr>
                     <td colspan="5">V databáze sa momentálne nenachádzajú žiadne dvere.</td>
                 </tr>
-            <?php else: ?>
-                <?php foreach ($doors as $door): ?>
+            <?php } else { ?>
+                <?php foreach ($doors as $door) { ?>
                     <tr>
                         <td data-label="ID"><?= (int)$door->getId() ?></td>
-                        <th scope="row" data-label="Názov dverí"><?= htmlspecialchars((string)$door->getName()) ?></th>
+                        <th scope="row" data-label="Názov dverí">
+                            <?= htmlspecialchars((string)$door->getName()) ?>
+                        </th>
                         <td data-label="Budova"><?= htmlspecialchars((string)$door->getBuilding()) ?></td>
                         <td data-label="Popis"><?= htmlspecialchars((string)$door->getDescription()) ?></td>
                         <td data-label="Akcie" class="actions-cell">
-                            <a class="edit-link" href="<?= $link->url('door.edit', ['id' => $door->getId()]) ?>">Upraviť</a>
+                            <a class="edit-link"
+                               href="<?= $link->url('door.edit', ['id' => $door->getId()]) ?>">Upraviť</a>
                             <form method="post" action="<?= $link->url('door.delete') ?>" class="inline-form">
                                 <input type="hidden" name="id" value="<?= (int)$door->getId() ?>">
                                 <button type="submit" class="delete-link">Zmazať</button>
                             </form>
                         </td>
                     </tr>
-                <?php endforeach; ?>
-            <?php endif; ?>
+                <?php } ?>
+            <?php } ?>
             </tbody>
         </table>
     </div>
