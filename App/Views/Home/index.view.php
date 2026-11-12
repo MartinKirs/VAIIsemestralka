@@ -35,7 +35,7 @@
                 <th scope="row" data-label="Modul">Žiadosti o prístup</th>
                 <td data-label="Stav">Žiadne nevybavené žiadosti</td>
                 <td data-label="Akcie">
-                    <a class="edit-link" href="<?= $link->url('home.index') ?>">Zobraziť</a>
+                    <a class="edit-link" href="<?= $link->url('accessrequest.index') ?>">Otvoriť žiadosti</a>
                 </td>
             </tr>
             </tbody>
